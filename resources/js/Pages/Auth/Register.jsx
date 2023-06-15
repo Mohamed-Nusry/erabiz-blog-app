@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Button from '@/Components/Button';
-import Guest from '@/Layouts/Guest';
 import Input from '@/Components/Input';
 import Label from '@/Components/Label';
 import ValidationErrors from '@/Components/ValidationErrors';
@@ -31,78 +30,86 @@ export default function Register() {
     };
 
     return (
-        <Guest>
-            <Head title="Register" />
+        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
 
-            <ValidationErrors errors={errors} />
+            <div>
+                <h1 className="text-3xl">Blog App</h1>
+            </div>
 
-            <form onSubmit={submit}>
-                <div>
-                    <Label forInput="name" value="Name" />
+            <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
 
-                    <Input
-                        type="text"
-                        name="name"
-                        value={data.name}
-                        className="mt-1 block w-full"
-                        autoComplete="name"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
+                <Head title="Register" />
 
-                <div className="mt-4">
-                    <Label forInput="email" value="Email" />
+                <ValidationErrors errors={errors} />
 
-                    <Input
-                        type="email"
-                        name="email"
-                        value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
+                <form onSubmit={submit}>
+                    <div>
+                        <Label forInput="name" value="Name" />
 
-                <div className="mt-4">
-                    <Label forInput="password" value="Password" />
+                        <Input
+                            type="text"
+                            name="name"
+                            value={data.name}
+                            className="mt-1 block w-full"
+                            autoComplete="name"
+                            isFocused={true}
+                            handleChange={onHandleChange}
+                            required
+                        />
+                    </div>
 
-                    <Input
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="new-password"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
+                    <div className="mt-4">
+                        <Label forInput="email" value="Email" />
 
-                <div className="mt-4">
-                    <Label forInput="password_confirmation" value="Confirm Password" />
+                        <Input
+                            type="email"
+                            name="email"
+                            value={data.email}
+                            className="mt-1 block w-full"
+                            autoComplete="username"
+                            handleChange={onHandleChange}
+                            required
+                        />
+                    </div>
 
-                    <Input
-                        type="password"
-                        name="password_confirmation"
-                        value={data.password_confirmation}
-                        className="mt-1 block w-full"
-                        handleChange={onHandleChange}
-                        required
-                    />
-                </div>
+                    <div className="mt-4">
+                        <Label forInput="password" value="Password" />
 
-                <div className="flex items-center justify-end mt-4">
-                    <Link href={route('login')} className="underline text-sm text-gray-600 hover:text-gray-900">
-                        Already registered?
-                    </Link>
+                        <Input
+                            type="password"
+                            name="password"
+                            value={data.password}
+                            className="mt-1 block w-full"
+                            autoComplete="new-password"
+                            handleChange={onHandleChange}
+                            required
+                        />
+                    </div>
 
-                    <Button className="ml-4" processing={processing}>
-                        Register
-                    </Button>
-                </div>
-            </form>
-        </Guest>
+                    <div className="mt-4">
+                        <Label forInput="password_confirmation" value="Confirm Password" />
+
+                        <Input
+                            type="password"
+                            name="password_confirmation"
+                            value={data.password_confirmation}
+                            className="mt-1 block w-full"
+                            handleChange={onHandleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="flex items-center justify-end mt-4">
+                        <Link href={route('login')} className="underline text-sm text-gray-600 hover:text-gray-900">
+                            Already registered?
+                        </Link>
+
+                        <Button className="ml-4 bg-blue-700" processing={processing}>
+                            Register
+                        </Button>
+                    </div>
+                </form>
+            </div>
+        </div>
     );
 }

@@ -8,8 +8,7 @@
 <body>
 
     <h1>Welcome</h1>
-    {{-- <div id="hello-react"></div> --}}
 
 </body>
-    {{-- <script type="module" src="http://127.0.0.1:3000/resources/js/app.js"></script> --}}
+
 </html>
