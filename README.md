@@ -11,8 +11,8 @@
 
 ### Required system dependencies
 
-PHP Version **8.1.6** Recommended
-Node Version **16.16.0** Recommended
+1. PHP Version **8.1.6** Recommended
+2. Node Version **16.16.0** Recommended
 
 
 ### Prerequisite to the application
