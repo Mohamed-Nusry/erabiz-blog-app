@@ -10,6 +10,6 @@
 
 ### Prerequisite to the application
 
-Postman Collection and SQL file for database can be found in **prerequisites** folder 
+Postman Collection can be found in **prerequisites** folder 
 
 ### About work
